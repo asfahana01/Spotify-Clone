@@ -1,4 +1,4 @@
-flex{
+.flex{
     display:flex;
 }
 .justify-center{
@@ -9,4 +9,15 @@ flex{
 }
 .border{
     border: 2px solid red;
+    margin: 3px;
+}
+.bg-black{
+    background-color: black;
+    color:white;
+}
+.invert{
+    filter: invert(1);
+}
+.bg-grey{
+    background-color: #121212;
 }
