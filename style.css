@@ -27,3 +27,26 @@
     padding-top:14px;
     font-weight:bold;
 }
+.heading{
+    display:flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 9px;
+}
+.library{
+    min-height:40vh;
+    position:relative;
+}
+
+.footer{
+    display:flex;
+    font-size: 10px;
+    color:grey;
+    gap:15px;
+    position: absolute;
+    bottom: 0;
+}
+.footer a{
+    color:grey;
+    text-decoration: none;
+}
