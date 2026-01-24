@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0;
     padding:0;
+    font-family: "Roboto", sans-serif;
 }
 /*body{
     background-color: black;
@@ -8,14 +11,19 @@
 }*/
 .left{
     width:25vw;
-    padding:34px;
+    padding:10px;
 }
 .right{
     width:75vw;
+}
+.home{
+    
 }
 .home ul li{
     display:flex;
     width:15px;
     list-style: none;
-    gap: 15px;;
+    gap: 15px;
+    padding-top:14px;
+    font-weight:bold;
 }
