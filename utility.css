@@ -17,6 +17,7 @@
 }
 .invert{
     filter: invert(1);
+    font-weight: 700px;
 }
 .bg-grey{
     background-color: #121212;
