@@ -1,75 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
     font-family: "Roboto", sans-serif;
 }
-body{
+
+body {
     background-color: black;
-    color:white;
+    color: white;
 }
-.left{
-    width:25vw;
-    padding:10px;
+
+.left {
+    width: 25vw;
+    padding: 10px;
 }
-.right{
-    width:75vw;
+
+.right {
+    width: 75vw;
 }
-.home ul li{
-    display:flex;
-    width:15px;
+
+.home ul li {
+    display: flex;
+    width: 15px;
     list-style: none;
     gap: 15px;
-    padding-top:14px;
-    font-weight:bold;
+    padding-top: 14px;
+    font-weight: bold;
 }
-.heading{
-    display:flex;
+
+.heading {
+    display: flex;
     gap: 15px;
     align-items: center;
     font-size: 9px;
 }
-.library{
-    min-height:76vh;
-    position:relative;
+
+.library {
+    min-height: 76vh;
+    position: relative;
 }
 
-.footer{
-    display:flex;
+.footer {
+    display: flex;
     font-size: 10px;
-    color:grey;
-    gap:15px;
+    color: grey;
+    gap: 15px;
     position: absolute;
     bottom: 0;
     padding: 4px 0;
 }
-.footer a{
-    color:grey;
+
+.footer a {
+    color: grey;
     text-decoration: none;
 }
-.right{
-    margin:16px 0;
+
+.right {
+    margin: 16px 0;
 }
-.buttons{
-    display:flex;
+
+.buttons {
+    display: flex;
     justify-content: right;
-    gap:10px;
+    gap: 10px;
 
 }
-.header{
+
+.header {
+    background-color: rgb(34, 34, 34);
+}
+
+.header * {
     
-    background-color: rgb(34,34,34);
-}
-.header *{
-    padding: 10px;
+    padding-top: 0px;
+    padding: 5px;
+    margin-bottom: 5px;
 }
 
-.spotifyPlaylists{
+.spotifyPlaylists {
     padding: 16px;
     margin-bottom: 5px;
 }
-.cardContainer{
+
+.cardContainer {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
@@ -78,24 +92,131 @@ body{
     max-height: 45vh;
 }
 
-.card{
+.card {
     position: relative;
     width: 200px;
     padding: 10px;
     border-radius: 5px;
     background-color: #252525;
 }
-.card > *{
+
+.card>* {
     padding-top: 10px;
 }
-.card img{
+
+.card img {
     width: 100%;
     object-fit: contain;
 }
-.play{
+
+.play {
     position: absolute;
     top: 164px;
     right: 16px;
     opacity: 1;
     transition: all 1s ease-out;
+}
+
+.signupbtn {
+    font-style: bold;
+    font-weight: bold;
+    color: grey;
+    border-radius: 26px;
+    border: none;
+    outline: none;
+    background-color: rgb(34, 34, 34);
+    cursor: pointer;
+}
+
+.signupbtn:hover {
+    font-size: 15px;
+    color: white;
+    transition: all 60ms ease-in-out;
+}
+
+.loginbtn {
+    padding: 15px;
+    font-style: bold;
+    font-weight: bold;
+    color: black;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    width: 96px;
+    cursor: pointer;
+}
+
+.loginbtn:hover {
+    color:#252525;
+    text-decoration: underline;
+    transition: all 60ms ease-in-out;
+}
+
+.installAppbtn {
+    font-style: bold;
+    font-weight: bold;
+    color: grey;
+    border-radius: 26px;
+    border: none;
+    outline: none;
+    background-color: rgb(34, 34, 34);
+    cursor: pointer;
+}
+
+.installAppbtn:hover {
+    font-size: 15px;
+    color: white;
+    transition: all 60ms ease-in-out;
+}
+
+.downloadbtn {
+    font-size: medium;
+    font-style: bold;
+    font-weight: bold;
+    color: grey;
+    border-radius: 26px;
+    border: none;
+    outline: none;
+    background-color: rgb(34, 34, 34);
+    cursor: pointer;
+}
+
+.downloadbtn:hover {
+    color: white;
+    transition: all 60ms ease-in-out;
+}
+
+.supportbtn {
+    font-size: medium;
+    font-style: bold;
+    font-weight: bold;
+    color: grey;
+    border-radius: 26px;
+    border: none;
+    outline: none;
+    background-color: rgb(34, 34, 34);
+    cursor: pointer;
+}
+
+.supportbtn:hover {
+    font-size: 1rem;
+    color: white;
+    transition: all 60ms ease-in-out;
+}
+
+.premiumbtn {
+    font-size: medium;
+    font-style: bold;
+    font-weight: bold;
+    color: grey;
+    border-radius: 26px;
+    border: none;
+    outline: none;
+    background-color: rgb(34, 34, 34);
+    cursor: pointer;
+}
+
+.premiumbtn:hover {
+    color: white;
+    transition: all 60ms ease-in-out;
 }
