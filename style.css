@@ -16,9 +16,6 @@ body{
 .right{
     width:75vw;
 }
-.home{
-    
-}
 .home ul li{
     display:flex;
     width:15px;
@@ -65,4 +62,27 @@ body{
 }
 .header *{
     padding: 10px;
+}
+
+.spotifyPlaylists{
+    padding: 16px;
+    margin-bottom: 5px;
+}
+.cardContainer{
+    display: flex;
+}
+
+.card{
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #252525;
+    margin: 5px;
+}
+.card > *{
+    padding-top: 10px;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
 }
