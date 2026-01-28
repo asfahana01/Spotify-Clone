@@ -10,7 +10,6 @@ async function getSongs() {
         const element = as[index];
         if (element.href.endsWith(".mp3")) {
             songs.push(element.href.split("/songs/")[1])
-            songs.push(element.href)
         }
     }
     return songs
