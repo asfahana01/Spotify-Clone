@@ -227,11 +227,17 @@ body {
     bottom: 0px;
     background-color: beige;
     color:black;
-    width: 100%;
+    width: 97%;
     padding: 12px;
 }
 .songbuttons{
     display: flex;
     justify-content: center;
     gap: 16px;
+}
+.songlist ul{
+    padding: 0 42px;
+}
+.songlist ul li{
+    list-style-type: decimal;
 }
