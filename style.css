@@ -78,6 +78,9 @@ body {
     padding: 5px;
     margin-bottom: 5px;
 }
+.h2{
+    margin: 21px;
+}
 
 .spotifyPlaylists {
     padding: 16px;
@@ -223,12 +226,15 @@ body {
 }
 
 .playbar{
-    position:absolute;
-    bottom: 0px;
-    background-color: beige;
+    position: fixed;
+    bottom: 35px;
+    filter: invert(1);
+    background: #dad5d5;
     color:black;
     width: 97%;
     padding: 12px;
+    width: 70vw;
+    border-radius: 30px;
 }
 .songbuttons{
     display: flex;
@@ -236,11 +242,11 @@ body {
     gap: 16px;
 }
 .songlist{
-    height: 515px;
+    height: 435px;
     overflow: auto;
 }
 .songlist ul{
-    padding: 0 32px;
+    padding: 0 42px;
 }
 .songlist ul li{
     list-style-type: decimal;
@@ -250,14 +256,14 @@ body {
     padding: 12px 0;
     border: 1px solid white;
     margin: 12px 0;
-    padding: 13px;
+    padding: 13px; 
     border-radius: 5px;
     justify-content: space-between;
 }
 
 .info{
     font-size: 15px;
-    width: 344px;
+    width: 244px;
 }
 .playnow{
     display: flex;
