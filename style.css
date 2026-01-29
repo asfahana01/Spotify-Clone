@@ -235,19 +235,29 @@ body {
     justify-content: center;
     gap: 16px;
 }
+.songlist{
+    height: 515px;
+    overflow: auto;
+}
 .songlist ul{
-    padding: 0 42px;
+    padding: 0 32px;
 }
 .songlist ul li{
     list-style-type: decimal;
     display: flex;
-    gap: 34px;
+    gap: 10px;
     cursor: pointer;
     padding: 12px 0;
     border: 1px solid white;
     margin: 12px 0;
     padding: 13px;
     border-radius: 5px;
+    justify-content: space-between;
+}
+
+.info{
+    font-size: 15px;
+    width: 344px;
 }
 .playnow{
     display: flex;
