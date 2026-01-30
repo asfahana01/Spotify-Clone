@@ -1,6 +1,16 @@
 
 let currentSong = new Audio();
 
+function secondsToMinutesSeconds(totalSeconds) {
+  totalSeconds = Math.floor(totalSeconds); // remove decimals
+
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+
+  return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+}
+
+
 async function getSongs() {
     let a = await fetch("http://127.0.0.1:5500/songs/")
     const response = await a.text()
@@ -17,13 +27,13 @@ async function getSongs() {
     return songs
 }
 
-const playMusic = (track) =>{
+const playMusic = (track) => {
     //let audio = new Audio("/songs/" + track)
     currentSong.src = "/songs/" + track
     currentSong.play()
-     play.src="pause.svg"
-     document.querySelector(".songinfo").innerHTML = track
-     document.querySelector(".songtime").innerHTML = "00:00 / 00:00"
+    play.src = "pause.svg"
+    document.querySelector(".songinfo").innerHTML = track
+    document.querySelector(".songtime").innerHTML = "00:00 / 00:00"
 }
 async function main() {
     // get the list of all songs
@@ -34,21 +44,21 @@ async function main() {
         songUL.innerHTML = songUL.innerHTML + `<li>
                             <img class="invert"src="music.svg" alt="">
                             <div class="info">
-                                <div>${song.replaceAll("%20" , " ")}</div>
+                                <div>${song.replaceAll("%20", " ")}</div>
                                 <div>Asfa </div>
                             </div>
                             <div class="playnow">
                              <span>Play Now</span>
                              <img class="invert" src="play.svg" alt="" >
-                             <div> </li>`; 
+                             <div> </li>`;
     }
 
     //attach an event listener to each song.
 
-    Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach(e=>{
-        e.addEventListener("click", element =>{
-        console.log(e.querySelector(".info").firstElementChild.innerHTML)   
-        playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim())
+    Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach(e => {
+        e.addEventListener("click", element => {
+            console.log(e.querySelector(".info").firstElementChild.innerHTML)
+            playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim())
         })
     })
     /* play the first song
@@ -63,15 +73,22 @@ async function main() {
 
     //Attach an event listener to play, next and previous
 
-    play.addEventListener("click", () =>{
-        if(currentSong.paused){
+    play.addEventListener("click", () => {
+        if (currentSong.paused) {
             currentSong.play()
-            play.src="pause.svg"
+            play.src = "pause.svg"
         }
         else {
             currentSong.pause()
-            play.src="play.svg"
+            play.src = "play.svg"
         }
+    })
+    //Listen for timeupdate event
+    currentSong.addEventListener("timeupdate", () => {
+        console.log(currentSong.currentTime, currentSong.duration);
+        document.querySelector(".songtime").innerHTML = 
+        `${secondsToMinutesSeconds(currentSong.currentTime)} /
+         ${secondsToMinutesSeconds(currentSong.duration)}`
     })
 }
 main()
