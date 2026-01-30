@@ -21,6 +21,7 @@ const playMusic = (track) =>{
     //let audio = new Audio("/songs/" + track)
     currentSong.src = "/songs/" + track
     currentSong.play()
+     play.src="pause.svg"
 }
 async function main() {
     // get the list of all songs
@@ -57,5 +58,18 @@ async function main() {
         console.log(audio.duration, audio.currentSrc, audio.currentTime)
         //The duration variable now holds the duration (in seconds) of the audio clip
     });*/
+
+    //Attach an event listener to play, next and previous
+
+    play.addEventListener("click", () =>{
+        if(currentSong.paused){
+            currentSong.play()
+            play.src="pause.svg"
+        }
+        else {
+            currentSong.pause()
+            play.src="play.svg"
+        }
+    })
 }
 main()
