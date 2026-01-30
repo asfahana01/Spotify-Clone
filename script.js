@@ -27,18 +27,20 @@ async function getSongs() {
     return songs
 }
 
-const playMusic = (track) => {
+const playMusic = (track,pause = false) => {
     //let audio = new Audio("/songs/" + track)
     currentSong.src = "/songs/" + track
-    currentSong.play()
-    play.src = "pause.svg"
-    document.querySelector(".songinfo").innerHTML = track
+    if(!pause){
+        currentSong.play()
+        play.src = "play.svg"
+    }
+    document.querySelector(".songinfo").innerHTML = decodeURI(track)
     document.querySelector(".songtime").innerHTML = "00:00 / 00:00"
 }
 async function main() {
     // get the list of all songs
     let songs = await getSongs()
-
+    playMusic(songs[0],true)
     let songUL = document.querySelector(".songlist").getElementsByTagName("ul")[0]
     for (const song of songs) {
         songUL.innerHTML = songUL.innerHTML + `<li>
