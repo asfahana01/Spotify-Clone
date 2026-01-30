@@ -22,6 +22,8 @@ const playMusic = (track) =>{
     currentSong.src = "/songs/" + track
     currentSong.play()
      play.src="pause.svg"
+     document.querySelector(".songinfo").innerHTML = track
+     document.querySelector(".songtime").innerHTML = "00:00 / 00:00"
 }
 async function main() {
     // get the list of all songs

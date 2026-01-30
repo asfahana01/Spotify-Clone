@@ -299,3 +299,13 @@ body {
 .songbuttons img{
 cursor: pointer;
 }
+.songtime, .songinfo{
+    font-size: 14px;
+    color:black;
+    pad: 0 12px;
+}
+
+.abovebar{
+    display: flex;
+    justify-content: space-between;
+}
