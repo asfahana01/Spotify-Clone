@@ -245,6 +245,9 @@ body {
     height: 435px;
     overflow: auto;
 }
+.hamburger{
+    display: none;
+}
 .songlist ul{
     padding: 0 42px;
 }
@@ -325,6 +328,9 @@ cursor: pointer;
   }
   .playbar{
     width: 95vw;
+  }
+  .hamburger{
+    display: block;
   }
 
 }
