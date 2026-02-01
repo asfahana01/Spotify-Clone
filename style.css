@@ -333,6 +333,7 @@ cursor: pointer;
     z-index: 1;
     width: 360px;
     background-color: black;
+    padding: 0;
 
   }
   .left .close{
@@ -340,6 +341,9 @@ cursor: pointer;
     right: 25px;
     top:25px;
     width: 29px;
+  }
+  .songinfo, .songtime{
+    width: auto;
   }
    .right{
     width: 100vw;
